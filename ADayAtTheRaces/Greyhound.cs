@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ADayAtTHeRaces
@@ -20,8 +16,8 @@ namespace ADayAtTHeRaces
         public int LanePosition = 0;
         public bool Finished = false;
 
-        //public double photoFinish = 0.0;
         private double handicap = 1.0;
+
 
         //Constructors and Setters
 
@@ -44,7 +40,7 @@ namespace ADayAtTHeRaces
 
         public bool Run()
         {
-            double movement = Randomizer.Next(1, 4); // * handicap;
+            double movement = Randomizer.Next(1, 4); 
             Location += movement;
             int intMovement = Convert.ToInt32(Location) + Convert.ToInt32(StartingPosition);
             MyPictureBox.Left = intMovement;
@@ -64,11 +60,5 @@ namespace ADayAtTHeRaces
             Location = StartingPosition;
             Finished = false;
         }
-
-        //public void PhotoFinish()
-        //{
-        //    double distance = Randomizer.Next(1, 100) * handicap;
-        //    this.photoFinish = distance;
-        //}
     }
 }
